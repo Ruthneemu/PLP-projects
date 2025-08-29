@@ -1,0 +1,110 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  margin: 0 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Header with Flexbox */
+.header {
+  background: #0077cc;
+  color: white;
+  padding: 1rem;
+  display: flex; /* Flexbox */
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex; /* Flexbox for nav links */
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav a {
+  color: white;
+  font-weight: bold;
+}
+
+/* Main Layout (Flexbox for content + sidebar) */
+.main-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.content {
+  flex: 2; /* Take more space */
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.sidebar {
+  flex: 1;
+  background: #e0e0e0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Grid Section */
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4-column grid */
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #ddd;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 900px) {
+  /* Stack sidebar below content */
+  .main-container {
+    flex-direction: column;
+  }
+
+  /* Grid goes to 2 columns */
+  .grid-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  /* Grid goes to 1 column */
+  .grid-section {
+    grid-template-columns: 1fr;
+  }
+
+  /* Nav turns vertical */
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  }
